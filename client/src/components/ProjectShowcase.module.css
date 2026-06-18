@@ -1,0 +1,191 @@
+.sectionHeader {
+    display: grid;
+    gap: 0.6rem;
+    max-width: 1200px;
+    margin: 0 auto 1.5rem;
+    padding: 0 2rem;
+}
+
+.sectionTag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: rgba(16, 185, 129, 0.12);
+    border-radius: 999px;
+}
+
+.showcaseCard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 2rem;
+}
+
+.showcaseCardReverse {
+    padding-top: 0;
+}
+
+.showcaseGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    align-items: center;
+}
+
+.imageContainer {
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.showcaseImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+    transform: scale(1);
+}
+
+.imageContainer:hover .showcaseImage {
+    transform: scale(1.04);
+}
+
+.content {
+    padding: 0 1rem;
+}
+
+.eyebrowLabel {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+}
+
+.labelCoral {
+    color: var(--coral);
+}
+
+.title {
+    font-family: "DM Serif Display", serif;
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 14px;
+}
+
+.description {
+    color: var(--ink-2);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.featureList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding: 0;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--ink-2);
+}
+
+.featureItem::before {
+    content: "✓";
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.ctaButton {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+}
+
+.ctaButton:hover {
+    opacity: 0.8;
+}
+
+.ctaButtonCoral {
+    background: var(--coral);
+}
+
+.sectionDivider {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--ink-2);
+}
+
+@media (max-width: 900px) {
+    .showcaseGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        padding: 0;
+        order: 1;
+    }
+
+    .imageContainer {
+        order: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .showcaseCard {
+        padding: 16px 1rem;
+    }
+
+    .sectionHeader,
+    .sectionDivider {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .showcaseCard {
+        padding: 14px 0.75rem;
+    }
+
+    .showcaseGrid {
+        gap: 1.25rem;
+    }
+
+    .imageContainer {
+        aspect-ratio: 4 / 3;
+    }
+
+    .title {
+        font-size: clamp(1.5rem, 5vw, 1.85rem);
+    }
+
+    .description,
+    .featureItem {
+        font-size: 0.92rem;
+    }
+}

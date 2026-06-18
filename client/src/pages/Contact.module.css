@@ -1,0 +1,53 @@
+.contactPage {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 18px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.subheading {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.section h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.section p,
+.section li {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.section ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.section li {
+    margin-bottom: 0.5rem;
+}

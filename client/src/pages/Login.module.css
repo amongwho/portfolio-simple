@@ -1,0 +1,88 @@
+.sectionSignIn {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid white;
+  padding: 5rem;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 26, 54, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  background-color: black;
+  border: 2px solid white;
+  padding: 5rem;
+  max-width: 400px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 0;
+}
+
+.backToLogin {
+  position: sticky;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .sectionSignIn {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .signInForm,
+  .modalContent {
+    padding: 3rem 1.5rem;
+    width: min(100%, 360px);
+  }
+}
+
+@media (max-width: 480px) {
+
+  .signInForm,
+  .modalContent {
+    padding: 2rem 1rem;
+  }
+
+  .closeBtn {
+    top: 8px;
+    right: 10px;
+  }
+}
