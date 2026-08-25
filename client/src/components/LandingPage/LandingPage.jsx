@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Modal from "../Changelog.jsx";
 import styles from "./LandingPage.module.css";
 import { Link, Routes, Route } from "react-router-dom";
 
@@ -8,6 +10,7 @@ import { Notes } from "../../pages/Notes.jsx";
 import ProtectedRoute from "../ProtectedRoute.jsx";
 
 export const LandingPage = () => {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <Routes>
@@ -91,6 +94,14 @@ export const LandingPage = () => {
                     description of features
                   </li>
                 </ul>
+                <div>
+                  <button onClick={() => setOpen(true)}>Portfolio Changelogs</button>
+
+                  <Modal isOpen={open} onClose={() => setOpen(false)}>
+                    <h2>Some Title</h2>
+                    <p>Any content goes here — paragraphs, images, forms, whatever.</p>
+                  </Modal>
+                </div>
               </div>
             </section>
           }
